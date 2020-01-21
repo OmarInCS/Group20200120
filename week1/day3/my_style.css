@@ -1,0 +1,24 @@
+div {
+    background-color: aquamarine;
+    border: 2px solid gray;
+    padding: 8px;
+    margin: 8px;
+    text-align: center;
+}
+
+article > div {
+    background-color: cadetblue;
+}
+
+body {
+    margin: 16px 0px;
+}
+
+span {
+    background-color: greenyellow;
+    color: grey;
+    padding: 8px;
+}
+
+
+
