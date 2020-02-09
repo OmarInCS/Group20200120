@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addition Quiz</title>
+</head>
+<body>
+    <h1>Addition Quiz</h1>
+    <div id="question"></div>
+    <div id="result"></div>
+    <input id="tf-answer" type="number">
+    <button id="bt-check">Check Answer</button>
+    <button id="bt-new">New Question</button>
+
+
+    <script>
+
+        let x;
+        let y;
+
+        function checkAnswer() {
+            let answer = document.getElementById("tf-answer").value;
+            let resultDiv = document.getElementById("result");
+            if (answer == x+y) {
+                resultDiv.innerText = "Correct";
+            }
+            else {
+                resultDiv.innerText = "Wrong";
+            }
+        }
+
+        function newQuestion() {
+            x = parseInt(Math.random() * 10);
+            y = parseInt(Math.random() * 10);
+            // document.getElementById("question").innerText = "What's " + x + " + " + y + " ?";
+            document.getElementById("question").innerText = `What's ${x} + ${y} ?`;
+            document.getElementById("result").innerText = "";
+        }
+
+        document.getElementById("bt-check").onclick = checkAnswer;
+        document.getElementById("bt-new").onclick = newQuestion;
+
+
+    </script>
+
+
+</body>
+</html>

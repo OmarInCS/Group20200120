@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compute Salary</title>
+</head>
+<body>
+    <h1>Compute Salary</h1>
+    <form action="">
+        <label for="">Salary:</label>
+        <input id="tf-salary" type="number">
+        <div id="output"></div>
+        <button id="my-button">Compute</button>
+    </form>
+
+    <script>
+
+        function computeSalary() {
+            let salary = document.getElementById("tf-salary").value;
+            let annualSalary = salary * 12;
+            let netSalary = annualSalary * 0.95;
+            // console.log("Annual Salary is:", annualSalary);
+            // console.log("Net Salary is:", netSalary);
+
+            let div = document.getElementById("output");
+            div.innerText = "Annual Salary is: " + annualSalary;
+            div.innerText += "\nNet Salary is: " + netSalary;
+        
+            return false;
+        }
+
+        document.getElementById("my-button").onclick = computeSalary;
+    </script>
+</body>
+</html>
