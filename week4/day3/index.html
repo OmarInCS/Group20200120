@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        header {
+            width: 70%;
+            /* border: 1px solid lightgray; */
+            margin: auto;
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .img-box {
+            display: none;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+
+        .img-box.active {
+            display: block;
+        }
+
+        .img-box > img {
+            height: 200px;
+        }
+
+        .img-box > div {
+            position: absolute;
+            bottom: 8px;
+            left: 0px;
+            width: 100%;
+            text-align: center;
+            padding: 8px;
+            background-color: rgba(211, 211, 211, 0.5);
+        }
+
+        #next, #prev {
+            position: absolute;
+            top: calc(50% - 25px);
+            color: white;
+            font-size: 1.2em;
+            font-weight: bold;
+            padding: 8px;
+            height: 50px;
+            cursor: pointer;
+        }
+
+        #next {
+            right: 0px;
+        }
+
+        #prev {
+            left: 0px;
+        }
+
+        #next:hover, #prev:hover {
+            background-color: rgba(211, 211, 211, 0.5);
+        }
+
+        #dots-box {
+            position: absolute;
+            top: 0px;
+            left: calc(50% - 20px);
+        }
+
+        .dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: lightseagreen;
+            border-radius: 32px;
+        }
+
+        .dot.active {
+            background-color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="img-box active">
+            <img src="1.jpg" alt="">
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, sed sit corrupti laudantium exercitationem sint nemo. Laboriosam, velit repudiandae ducimus cum aliquam pariatur consectetur blanditiis mollitia sint corrupti aut iusto.</div>
+        </div>
+        <div class="img-box">
+            <img src="2.jpg" alt="">
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, sed sit corrupti laudantium exercitationem sint nemo. Laboriosam, velit repudiandae ducimus cum aliquam pariatur consectetur blanditiis mollitia sint corrupti aut iusto.</div>
+        </div>
+        <div class="img-box">
+            <img src="3.jpg" alt="">
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, sed sit corrupti laudantium exercitationem sint nemo. Laboriosam, velit repudiandae ducimus cum aliquam pariatur consectetur blanditiis mollitia sint corrupti aut iusto.</div>
+        </div>
+        <div class="img-box">
+            <img src="4.jpg" alt="">
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, sed sit corrupti laudantium exercitationem sint nemo. Laboriosam, velit repudiandae ducimus cum aliquam pariatur consectetur blanditiis mollitia sint corrupti aut iusto.</div>
+        </div>
+        
+        <a id="prev">&#10094;</a>
+        <a id="next">&#10095;</a>
+
+        <div id="dots-box">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </header>
+</body>
+</html>
